@@ -14,13 +14,14 @@
     }
 
     .container {
-      with: 100%;
+      width: 100%;         /* ширина контейнера 100%, максимум 1200px */
       max-width: 1200px;
       margin: 0 auto;
       background: #fff;
       padding: 40px 20px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box; /* padding враховується у ширину */
     }
 
     h1 {
@@ -56,9 +57,9 @@
       margin-top: 30px;
     }
 
-    /* Нові стилі для блоку з фото і текстом */
+    /* Стиль блоку з фото і текстом */
     .content-block {
-      display: flex;
+      display: flex;                /* Вертикальний рядок: фото + текст */
       align-items: center;
       background: white;
       border-radius: 12px;
@@ -69,14 +70,19 @@
       margin-left: auto;
       margin-right: auto;
       text-align: left;
+      box-sizing: border-box;
+      gap: 20px;                   /* Відстань між фото і текстом */
     }
 
     .content-block img {
-      width: 100%;
+      width: 40%;                  /* Ширина картинки 40% блоку */
       height: auto;
       border-radius: 10px;
-      margin-right: 20px;
-      flex-shrink: 0;
+      flex-shrink: 0;              /* Не стискаємо картинку */
+    }
+
+    .text-content {
+      width: 60%;                  /* Текст займає 60% ширини блоку */
     }
 
     .text-content h2 {
@@ -91,15 +97,18 @@
       line-height: 1.4;
     }
 
-    @media (max-width: 1200px) {
+    /* Адаптивність для екранів <= 768px */
+    @media (max-width: 768px) {
       .content-block {
-        flex-direction: column;
+        flex-direction: column;    /* Змінюємо на вертикальний стовпець */
         text-align: center;
       }
       .content-block img {
-        margin-right: 0;
-        margin-bottom: 15px;
-        width: 80%;
+        width: 80%;                /* Збільшуємо ширину картинки */
+        margin: 0 0 15px 0;
+      }
+      .text-content {
+        width: 100%;               /* Текст на всю ширину */
       }
     }
   </style>
@@ -109,13 +118,27 @@
 
     <!-- Перший блок з фото і текстом -->
     <div class="content-block">
+      <!-- Фото першого блоку -->
       <img src="images/hair-guide.jpg" alt="Гайд по догляду за волоссям" />
+      <!-- Текстовий контент першого блоку -->
       <div class="text-content">
         <h2>Гайд по догляду за волоссям</h2>
         <p>Цей гайд містить корисні поради та інструкції, як правильно доглядати за волоссям, щоб воно було здоровим, блискучим і сильним.</p>
       </div>
     </div>
 
+    <!-- Другий тестовий блок з фото і текстом -->
+    <div class="content-block">
+      <!-- Фото другого блоку (тимчасово використовую те саме фото, заміниш пізніше) -->
+      <img src="images/hair-guide.jpg" alt="Для кого цей гайд" />
+      <!-- Текстовий контент другого блоку -->
+      <div class="text-content">
+        <h2>Для кого цей гайд</h2>
+        <p>Цей гайд створений для тих, хто хоче покращити стан свого волосся та дізнатися перевірені методи догляду.</p>
+      </div>
+    </div>
+
+    <!-- Основна частина з заголовком і кнопками -->
     <h1>Гайд ProHair від Mila Bondarchuk</h1>
     <p>Оформи оплату та отримай доступ до Telegram-групи з усіма матеріалами!</p>
 
