@@ -54,10 +54,67 @@
       color: #888;
       margin-top: 30px;
     }
+
+    /* Нові стилі для блоку з фото і текстом */
+    .content-block {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .content-block img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .text-content h2 {
+      margin-top: 0;
+      color: #222;
+      font-size: 22px;
+    }
+
+    .text-content p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 600px) {
+      .content-block {
+        flex-direction: column;
+        text-align: center;
+      }
+      .content-block img {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 80%;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
+
+    <!-- Перший блок з фото і текстом -->
+    <div class="content-block">
+      <img src="images/hair-guide.jpg" alt="Гайд по догляду за волоссям" />
+      <div class="text-content">
+        <h2>Гайд по догляду за волоссям</h2>
+        <p>Цей гайд містить корисні поради та інструкції, як правильно доглядати за волоссям, щоб воно було здоровим, блискучим і сильним.</p>
+      </div>
+    </div>
+
     <h1>Гайд ProHair від Mila Bondarchuk</h1>
     <p>Оформи оплату та отримай доступ до Telegram-групи з усіма матеріалами!</p>
 
