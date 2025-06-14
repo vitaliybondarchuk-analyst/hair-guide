@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Вліпи моє ім'я, та й все</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #222;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 28px;
+      margin: 10px 0;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    .small-note {
+      font-size: 14px;
+      color: #888;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TikTok-гід від Makarova</h1>
+    <p>Оформи оплату та отримай доступ до Telegram-групи з усіма матеріалами!</p>
+
+    <a class="button" href="https://www.privat24.ua/send/hhmx3" target="_blank">Оплатити</a>
+    <br />
+    <a class="button" href="https://t.me/+lgdSjWkW-phiZjEy" target="_blank">Я оплатив(ла), перейти в Telegram</a>
+
+    <p class="small-note">* Після оплати натисни кнопку вище, щоб приєднатися</p>
+  </div>
+</body>
+</html>
